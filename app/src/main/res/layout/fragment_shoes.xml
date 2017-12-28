@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:orientation="vertical">
+
+    <me.shihao.library.XRadioGroup
+        android:id="@+id/radiogroup_shoes"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_88"
+        android:layout_marginTop="2px"
+        android:background="@color/navigation_bar_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/ui_margin_20">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/radio_shoes_interset"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/radiobutton_bg"
+                android:button="@null"
+                android:checked="true"
+                android:layout_alignParentEnd="true"
+                android:text="@string/shoes_interset"
+                android:textColor="@drawable/radiobutton_textcolorchange"
+                android:textSize="@dimen/font_30" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3">
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/radio_craftsman_interview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/radiobutton_bg"
+                android:button="@null"
+                android:text="@string/craftsman_interview"
+                android:textColor="@drawable/radiobutton_textcolorchange"
+                android:textSize="@dimen/font_30" />
+        </RelativeLayout>
+    </me.shihao.library.XRadioGroup>
+
+    <com.zhurui.bunnymall.viewutils.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/refresh_head" />
+
+        <com.zhurui.bunnymall.viewutils.pulltorefresh.pullableview.PullableScrollView
+            android:id="@+id/shoes_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/ui_30"
+            android:layout_marginBottom="-40dp"
+            android:scrollbars="none">
+
+            <com.zhurui.bunnymall.viewutils.MyListViewformesure
+                android:id="@+id/my_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/navigation_bar_bg"
+                android:dividerHeight="@dimen/ui_30"
+                android:scrollbars="none">
+
+            </com.zhurui.bunnymall.viewutils.MyListViewformesure>
+        </com.zhurui.bunnymall.viewutils.pulltorefresh.pullableview.PullableScrollView>
+
+        <include layout="@layout/load_more" />
+    </com.zhurui.bunnymall.viewutils.pulltorefresh.PullToRefreshLayout>
+
+</LinearLayout>

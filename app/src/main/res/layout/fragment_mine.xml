@@ -1,0 +1,337 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhurui.bunnymall.mine.fragment.MineFragment"
+    android:background="@color/gray_bg"
+    android:scrollbars="none"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ui_460"
+            android:background="@drawable/minebg"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/navigation_bar_edit_margin"
+            android:paddingRight="@dimen/navigation_bar_edit_margin"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ui_148"
+                android:gravity="center_vertical|right">
+                <ImageView
+                    android:id="@+id/img_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/message" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <com.zhurui.bunnymall.viewutils.CircleImageView
+                    android:id="@+id/circle_head"
+                    android:layout_width="@dimen/ui_140"
+                    android:layout_height="@dimen/ui_140"
+                    android:src="@drawable/head_normal"
+                    app:border_color="@color/navigation_bar_bg"
+                    app:border_width="2px" />
+
+                <LinearLayout
+                    style="@style/mine_collection"
+                    android:layout_weight="0.4">
+
+                    <LinearLayout
+                        android:id="@+id/lin_productcollection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_product"
+                            style="@style/mine_collection_count"
+                            android:layout_gravity="center"
+                            android:text="0" />
+
+                        <TextView
+                            style="@style/mine_collection_type"
+                            android:text="@string/collection_product" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout style="@style/mine_collection">
+
+                    <LinearLayout
+                        android:id="@+id/lin_storecollection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_store"
+                            style="@style/mine_collection_count"
+                            android:layout_gravity="center"
+                            android:text="0" />
+
+                        <TextView
+                            style="@style/mine_collection_type"
+                            android:text="@string/collection_store" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout style="@style/mine_collection">
+
+                    <LinearLayout
+                        android:id="@+id/lin_footprint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_mark"
+                            style="@style/mine_collection_count"
+                            android:layout_gravity="center"
+                            android:text="0" />
+
+                        <TextView
+                            style="@style/mine_collection_type"
+                            android:text="@string/mark" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <TextView
+                    android:id="@+id/text_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/title_font_black"
+                    android:textSize="@dimen/font_48"
+                    android:text="程小姐"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"/>
+
+
+
+                <TextView
+                    android:id="@+id/text_footmessage"
+                    android:layout_width="@dimen/ui_200"
+                    android:layout_height="@dimen/margin_50"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/orange_corner_bg"
+                    android:textSize="@dimen/font_24"
+                    android:gravity="center"
+                    android:text="@string/look_foot_message"
+                    android:visibility="gone"
+                    android:textColor="@color/color_d2ba91"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ui_150"
+            android:layout_marginBottom="@dimen/ui_margin_20"
+            android:background="@color/navigation_bar_bg"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/text_judge"
+                style="@style/mine_orderinfo"
+                android:drawableTop="@drawable/menu_message"
+                android:text="@string/will_judge"
+                />
+
+            <TextView
+                android:id="@+id/text_pay"
+                style="@style/mine_orderinfo"
+                android:drawableTop="@drawable/will_pay"
+                android:text="@string/will_pay"
+                />
+
+            <TextView
+                android:id="@+id/text_send"
+                style="@style/mine_orderinfo"
+                android:drawableTop="@drawable/will_send"
+                android:text="@string/will_send"
+                />
+
+            <TextView
+                android:id="@+id/text_get"
+                style="@style/mine_orderinfo"
+                android:drawableTop="@drawable/will_get"
+                android:text="@string/will_get"
+                />
+
+            <TextView
+                android:id="@+id/text_orderall"
+                style="@style/mine_orderinfo"
+                android:drawableTop="@drawable/order_all"
+                android:text="@string/order_all"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_foot_data"
+            style="@style/mine_main"
+            android:layout_marginBottom="@dimen/ui_margin_20"
+            >
+            <TextView
+                style="@style/mine_collection_count.main"
+                android:drawableLeft="@drawable/foot_type"
+
+                android:text="我的足型数据"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/into"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_mywallet"
+            style="@style/mine_main"
+            >
+            <TextView
+                style="@style/mine_collection_count.main"
+                android:drawableLeft="@drawable/mine_wallet"
+                android:text="@string/my_wallet"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/into"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_info_safe"
+            style="@style/mine_main"
+            >
+            <TextView
+                style="@style/mine_collection_count.main"
+                android:drawableLeft="@drawable/mine_safety"
+                android:text="@string/info_safe"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/into"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_manageraddress"
+            style="@style/mine_main"
+            android:layout_marginBottom="@dimen/ui_margin_20"
+            >
+            <TextView
+                style="@style/mine_collection_count.main"
+                android:drawableLeft="@drawable/mine_address"
+                android:text="@string/manager_address"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/into"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_share"
+            style="@style/mine_main"
+            >
+            <TextView
+                style="@style/mine_collection_count.main"
+                android:drawableLeft="@drawable/mine_share"
+                android:text="@string/share_to_friend"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/into"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_in_bintutu"
+            style="@style/mine_main"
+            >
+            <TextView
+                style="@style/mine_collection_count.main"
+                android:drawableLeft="@drawable/mine_in_bintutu"
+                android:text="@string/in_bintutu"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/into"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_setting"
+            style="@style/mine_main"
+            android:layout_marginBottom="@dimen/ui_margin_20"
+            >
+            <TextView
+                style="@style/mine_collection_count.main"
+                android:drawableLeft="@drawable/setting"
+                android:text="@string/setting"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/into"
+                />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>
